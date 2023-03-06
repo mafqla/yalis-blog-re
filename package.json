@@ -1,0 +1,19 @@
+{
+  "name": "yalis-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter 'yalispress' docs:dev",
+    "dev:ppt": "pnpm --filter 'share' dev",
+    "build": "pnpm --filter 'yalispress' docs:build",
+    "build:ppt": "pnpm --filter 'share' build",
+    "export":"pnpm --filter 'share' export"
+  },
+  "keywords": [],
+  "author": "fql",
+  "license": "MIT"
+}
