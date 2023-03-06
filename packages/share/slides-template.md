@@ -8,6 +8,7 @@ info: |
   ## Slidev Starter Template
   Presentation slides for developers.
 
+  Learn more at [Sli.dev](https://sli.dev)
 drawings:
   persist: false
 transition: slide-left
@@ -15,13 +16,15 @@ css: unocss
 title: vitepress的使用
 ---
 
-## 快速构建优秀文档网站
+# vite
 
-VitePress
+Presentation slides for developers
 
-<navbar>
-  <span>符前霖</span>
-</navbar>
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    Press Space for next page <carbon:arrow-right class="inline"/>
+  </span>
+</div>
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
@@ -31,13 +34,22 @@ The last comment block of each slide will be treated as slide notes. It will be 
 transition: fade-out
 ---
 
-#  VitePress 是什么？
+# What is Slidev?
 
-VitePress 是一个基于 Vue.js 的静态站点生成器，专为构建文档网站而设计。
-使用 VitePress 可以快速构建出具有优秀用户体验的文档网站。
-它是由 Vue.js 的创造者尤雨溪开发的，所以在开发上有着非常优秀的技术架构和可维护性。
+Slidev is a slides maker and presenter designed for developers, consist of the following features
 
+- 📝 **Text-based** - focus on the content with Markdown, and then style them later
+- 🎨 **Themable** - theme can be shared and used with npm packages
+- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
+- 🤹 **Interactive** - embedding Vue components to enhance your expressions
+- 🎥 **Recording** - built-in recording and camera view
+- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
+- 🛠 **Hackable** - anything possible on a webpage
 
+<br>
+<br>
+
+Read more about [Why Slidev?](https://sli.dev/guide/why)
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
@@ -64,39 +76,31 @@ Here is another comment.
 transition: slide-up
 ---
 
-## VitePress 的主要特点
-- 快速启动和热更新：VitePress 采用了 Vite 的核心技术，可以在几乎瞬间启动和热更新，提高开发效率。
-- Markdown 文件编写：VitePress 的文档编写采用 Markdown 格式，使得编写文档非常方便，可以快速上手。
-- 内置搜索功能：VitePress 内置了搜索功能，可以通过快速检索文档内容来找到需要的信息。
-- 自定义主题和插件：VitePress 的主题和插件采用了 Vue.js 的组件化开发方式，可以根据需要对文档网站进行定制化。
-- 多语言支持：VitePress 支持多语言，可以为不同语言版本提供不同的主题和配置。
+# Navigation
 
+Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
 
-<style>
-h2 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+### Keyboard Shortcuts
 
----
-transition: slide-up
----
-#  如何开始使用 VitePress？
+|     |     |
+| --- | --- |
+| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
+| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
+| <kbd>up</kbd> | previous slide |
+| <kbd>down</kbd> | next slide |
 
-1. 安装 Node.js 和 yarn。
-2. 在终端中执行以下命令来安装 VitePress：`yarn global add vitepress`。
-3. 使用 VitePress 创建一个新的文档项目：`vitepress create my-docs`。
-4. 进入 my-docs 目录并启动 VitePress：`cd my-docs && yarn dev`。
-5. 在浏览器中访问 `http://localhost:3000` 即可看到生成的文档网站。
+<!-- https://sli.dev/guide/animations.html#click-animations -->
+<img
+  v-click
+  class="absolute -bottom-9 -left-7 w-80 opacity-50"
+  src="https://sli.dev/assets/arrow-bottom-left.svg"
+/>
+<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
-
+layout: image-right
+image: https://source.unsplash.com/collection/94734566/1920x1080
+---
 
 # Code
 
@@ -119,6 +123,7 @@ function updateUser(id: number, update: User) {
 
 <arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
 
+[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
 
 <style>
 .footnotes-sep {
