@@ -58,17 +58,17 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed, ref } from 'vue';
+  import { ComputedRef, computed, ref } from 'vue';
   import md5 from 'blueimp-md5';
   import articleData from '../../../../article-data.json';
-  import { getQueryParam } from '../utils.ts';
+  import { getQueryParam } from '../utils';
 
   const tags = computed(() => initTags(articleData));
   /**
    * 初始化标签数据
    * {tagTitle1: [article1, article2, ...}
    */
-  function initTags(articleData) {
+  function initTags(articleData: string | any[]) {
     const tags: any = {};
     for (let i = 0; i < articleData.length; i++) {
       const article = articleData[i];
@@ -80,7 +80,7 @@
           }
           tags[articleTag].push(article);
           // 文章按发布时间降序排序
-          tags[articleTag].sort((a, b) => b.date.localeCompare(a.date));
+          tags[articleTag].sort((a: { date: any; }, b: { date: string; }) => b.date.localeCompare(a.date));
         });
       }
     }
@@ -108,7 +108,7 @@
    * 初始化词云数据
    * [{"name": xx, "value": xx}]
    */
-  function initWordCloud(tags) {
+  function initWordCloud(tags: ComputedRef<any>) {
     const dataList = [];
     for (let tag in tags.value) {
       dataList.push({"name": tag, "value": tags.value[tag].length});

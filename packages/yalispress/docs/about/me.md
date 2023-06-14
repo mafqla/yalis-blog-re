@@ -7,7 +7,7 @@ showComment: false
 ---
 
 <p align="center">
-  <a href="https://yalisky.edu.org/" target="_blank" style="display: inline-block;">
+  <a href="https://yalisky.eu.org/" target="_blank" style="display: inline-block;">
     <img alt="个人主页" src="https://img.shields.io/badge/yalis-lightblue?logo=blogger&logoColor=lightblue" />
   </a>&nbsp;
     <a href="https://github.com/mafqla" target="_blank" style="display: inline-block;">
@@ -54,7 +54,6 @@ showComment: false
   <img src="https://img.shields.io/badge/-Less-D3D3D3?logo=Less&logoColor=1D365D" alt="Less" style="display: inline-block;" />&nbsp;
   <img src="https://img.shields.io/badge/-Sass-D3D3D3?logo=Sass&logoColor=1D365D" alt="Sass" style="display: inline-block;" />&nbsp;
   <img src="https://img.shields.io/badge/-Canvas-D3D3D3?logo=Canva&logoColor=1D365D" alt="Canvas" style="display: inline-block;" />&nbsp;
-  <img src="https://img.shields.io/badge/-React-D3D3D3?logo=React&logoColor=#61dafb" alt="React" style="display: inline-block;" />&nbsp;
 </p>
 
 ### DevOps
